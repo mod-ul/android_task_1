@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
             val takePictureIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
             val photoFile = createImageFile()
             photoFile?.also {
-                photoUri = FileProvider.getUriForFile(this, "your.package.name.fileprovider", it)
+                photoUri = FileProvider.getUriForFile(this, "AndroidTask1.file_provider", it)
                 takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoUri)
                 cameraLauncher.launch(takePictureIntent)
             }
